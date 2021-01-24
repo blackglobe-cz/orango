@@ -4,7 +4,7 @@ module.exports = async ({ orango }) => {
 
   // create query
   let query = Comment.link(
-    { user: 'eddie', tweet: '1' },
+    { from: {user: 'eddie'}, to: { tweet: '1'} },
     { message: 'This is the first comment' }
   )
   .return(orango.return.one())
